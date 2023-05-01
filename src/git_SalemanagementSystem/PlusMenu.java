@@ -16,7 +16,7 @@ public class PlusMenu extends Menu{
 	}
 	public void printInfo() {
 		System.out.println("name: " + name + " phonenumber: " + phonenumber + " hamburger: " + hamburger + " juice: " + juice);
-		System.out.println("burgerCost is : $" + c.getBurgerCost() + " juiceCost is: $" + c.getJuiceCost());
+		System.out.println("burgerCost is : $" + c.getBurgerCost() + " juiceCost  is: $" + c.getJuiceCost());
 
 	}
 }
