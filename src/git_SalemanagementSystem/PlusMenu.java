@@ -1,9 +1,12 @@
 package git_SalemanagementSystem;
 
+import java.util.ArrayList;
+
 public class PlusMenu extends Menu{
 	double burgerCost;
 	double juiceCost;
 	Cost c = new Cost();
+	Student std = new Student();
 	
 	public void setHamburger(String hamburger) {
 		c.setBurgerCost(hamburger);
