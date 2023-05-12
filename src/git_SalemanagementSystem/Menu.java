@@ -1,46 +1,29 @@
 	package git_SalemanagementSystem;
 	
-	public class Menu {
+	public abstract class Menu {
 		   public String name;
 		   public int phonenumber;
 		   public String hamburger;
 		   public String juice;
 		      
-		   public void setName(String name) {
-		      this.name = name;
-		   }
+		   public abstract void setName(String name);
 		   
-		    public String getName() {
-		        return this.name;
-		    }
+		    public abstract String getName();
 		   
-		    public void setPhoneNumber(int phonenumber) {
-		        this.phonenumber = phonenumber;
-		    }
+		    public abstract void setPhoneNumber(int phonenumber);
 		    
-		    public int getPhoneNumber() {
-		        return this.phonenumber;
-		    }
+		    public abstract int getPhoneNumber();
 	
-		    public void setHamburger(String hamburger) {
-		        this.hamburger = hamburger;
-		    }
+		    public abstract void setHamburger(String hamburger);
 		    
-		    public String getHamburger() {
-		        return this.hamburger;
-		    }
+		    public abstract String getHamburger();
 	
-		    public void setJuice(String juice) {
-		        this.juice = juice;
-		    }
+		    public abstract void setJuice(String juice);
 		    
-		    public String getJuice() {
-		        return this.juice;
-		    }
+		    public abstract String getJuice();
 		      
-		      public void printInfo() {
-		         System.out.println("name: " + name + " phonenumber: " + phonenumber + " hamburger: " + hamburger + " juice: " + juice);
-		      }
+		    public abstract void printInfo();
+			
 	
 		   
 		}
