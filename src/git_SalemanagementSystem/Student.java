@@ -1,6 +1,7 @@
 package git_SalemanagementSystem;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Student {
@@ -9,6 +10,9 @@ public class Student {
    public int id;
    public static ArrayList<String> emails = new ArrayList<String>();
    public String phone;
+   public int grade;
+   public int classroom;
+   Exc ex = new Exc();
 
    
    public Student() {
@@ -105,17 +109,34 @@ public class Student {
    
    public void getUserInput(Scanner input) {
 	    System.out.print("password: ");
-	    int pass = input.nextInt();
-	    this.setId(pass);
+	    try{
+	    	int pass = input.nextInt();
+	    	ex.badCode(pass);
+	    	this.setId(pass);
+	    }catch(InputMismatchException e) {
+	    	System.out.println("InputMismatchException error occur!");
+            System.exit(0);
+	    }catch(Exception e) {
+	    	System.out.println("Exception error occur!");
+            System.exit(0);
+	    }
+	   
 
 	    System.out.println("department: ");
 	    String name = input.next();
 	    this.setName(name);
 
 	    System.out.println("Email address: ");
-	    String email = input.next();
-
-	    emails.add(email);
+	    try{
+	    	String email = input.next();
+	    	emails.add(email);
+	    }catch(InputMismatchException e) {
+	    	System.out.println("InputMismatchException error occur!");
+            System.exit(0);
+	    }catch(Exception e) {
+	    	System.out.println("Exception error occur!");
+            System.exit(0);
+	    }
 	}
    
 
