@@ -1,8 +1,9 @@
 package git_SalemanagementSystem;
 
+import java.io.Serializable;
 import java.util.InputMismatchException;
 
-public class Exc {
+public class Exc implements Serializable{
 	public void badCode(int a) throws Exception{
 	}
 	

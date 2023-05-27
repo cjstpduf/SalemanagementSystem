@@ -11,7 +11,7 @@ public class HighSchoolStudent extends Student {
    }
    
    public void getUserInput(Scanner input) {
-	   Student std = new Student();
+	  Student std = new Student();
       System.out.print("Password: ");
       try{
     	  int id = input.nextInt();
