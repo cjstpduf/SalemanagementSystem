@@ -10,12 +10,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class EditGui extends JFrame{
+public class EditGui extends JPanel{
+	WindowFrame frame;
    JPanel p1= new JPanel();
    JPanel p2= new JPanel();
    JPanel p3= new JPanel();
-      public EditGui() {
-         super("SaleManagementSystem");
+      public EditGui(WindowFrame frame) {
+    	  this.frame = frame;
+    	 this.setLayout(new BorderLayout());
          p2.add(new JLabel("** menu edit ** "));
          p1.add(new JButton("1. edit name"));
          p1.add(new JTextField(15));
@@ -26,14 +28,10 @@ public class EditGui extends JFrame{
          p1.add(new JButton("4. edit juice"));
          p1.add(new JTextField(15));
 
-         
-         Container cp= getContentPane();
-         cp.add(p2, BorderLayout.NORTH);
-         cp.add(p1, BorderLayout.CENTER);
-         cp.add(p3, BorderLayout.SOUTH);
 
-         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         setSize(300, 700);
-         setVisible(true);
+         this.add(p2, BorderLayout.NORTH);
+         this.add(p1, BorderLayout.CENTER);
+         this.add(p3, BorderLayout.SOUTH);
+
       }
    }

@@ -9,6 +9,8 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Scanner;
 
+import gui.WindowFrame;
+
 public class Sale implements Serializable{
     static EventLogger logger = new EventLogger("log.txt");
 
@@ -17,10 +19,16 @@ public class Sale implements Serializable{
         int num = 0;
         Scanner input = new Scanner(System.in);
         SaleManagement sale = getObject("SaleManagement.ser");
+        System.out.println(sale);
         if (sale == null) {
             sale = new SaleManagement(input);
+            System.out.println("asdf");
+            System.out.println(sale);
         }
         putObject(sale, "SaleManagement.ser");
+        
+        WindowFrame F = new WindowFrame(sale);
+
  
        while(num != 5) {
           System.out.println("hamburger sale system");
@@ -56,8 +64,8 @@ public class Sale implements Serializable{
     }
     
     public void printt() {
-    	SaleManagement s = getObject("SaleManagement.ser");
-    	s.sales.get(0).printInfo();
+       SaleManagement s = getObject("SaleManagement.ser");
+       s.sales.get(0).printInfo();
     }
  
     

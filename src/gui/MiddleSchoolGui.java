@@ -9,12 +9,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-public class MiddleSchoolGui extends JFrame{
+public class MiddleSchoolGui extends JPanel{
+	WindowFrame frame;
    JPanel p1= new JPanel();
    JPanel p2= new JPanel();
    JPanel p3= new JPanel();
-      public MiddleSchoolGui() {
-         super("SaleManagementSystem");
+      public MiddleSchoolGui(WindowFrame frame) {
+    	  this.frame = frame;
          p2.add(new JLabel("Welcome to java hamburger store"));
          p1.add(new JButton("password : "));
          p1.add(new JTextArea("            "));
@@ -34,13 +35,10 @@ public class MiddleSchoolGui extends JFrame{
 
          
          
-         Container cp= getContentPane();
-         cp.add(p2, BorderLayout.NORTH);
-         cp.add(p1, BorderLayout.CENTER);
-         cp.add(p3, BorderLayout.SOUTH);
 
-         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         setSize(300, 700);
-         setVisible(true);
+         this.add(p2, BorderLayout.NORTH);
+         this.add(p1, BorderLayout.CENTER);
+         this.add(p3, BorderLayout.SOUTH);
+
       }
    }
